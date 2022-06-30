@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/bootstrap.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Bootstrap avangers</title>
+</head>
+<body>
+   <header class="">
+   </header>
+   
+   <main role="main">
+      <section class="catalog">
+         <div class="container">
+            <h2 class="text-center my-3">Movies catalog</h2>
+            
+            <div class="row">
+               <div class="col-4 position-relative">
+                  <div class="position-sticky w-100" style="top: 20px;">
+                     <form class="mb-4">
+                        <input type="text" class="form-control form-control-sm mb-3" aria-describedby="Search for movies" placeholder="Search for movies">
+                        
+                        <input type="number" class="form-control form-control-sm mb-3" min="0" max="10" step="0.1" aria-describedby="IMDB rating" placeholder="IMDB rating">
+                        
+                        <select class="form-select form-select-sm mb-3" aria-label="Default select example">
+                           <option selected>All</option>
+                           <option value="1">First avanger</option>
+                           <option value="2">Avangers vs ultron</option>
+                           <option value="3">Avangers endgame</option>
+                        </select>
+                        
+                        <select class="form-select form-select-sm mb-3" aria-label="Default select example">
+                           <option selected>Rating (first high)</option>
+                           <option value="1">Rating (first low)</option>
+                           <option value="2">Rating (high to low)</option>
+                           <option value="3">Rating (low to high)</option>
+                        </select>
+                        
+                        <button type="submit" class="btn btn-primary btn-sm w-100">Search</button>
+                     </form>
+                     
+                     <h3>Bookmarked movies</h3>
+                     <ul class="list-group">
+                        <li class="list-group-item p-3">
+                           <h6>Avangers: Infinity War</h6>
+                           <button type="button" class="btn btn-danger">Remove</button>
+                        </li>
+                        <li class="list-group-item p-3">
+                           <h6>The Avangers</h6>
+                           <button type="button" class="btn btn-danger">Remove</button>
+                        </li>
+                        <li class="list-group-item p-3">
+                           <h6>12 Years a Slave</h6>
+                           <button type="button" class="btn btn-danger">Remove</button>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="col-8">
+                  <h5>Search results: 39</h5>
+                  <div class="alert alert-success" role="alert">
+                     Use the form on the left to search for a movie
+                  </div>
+                  
+                  <div class="row mb-4">
+                     <div class="col-6 mb-3">
+                        <div class="card">
+                           <img src="./images/avengers-infinity-war.jpg" class="card-img-top" style="max-height: 180px; object-fit: cover;" alt="avengers infinity war image">
+                           <div class="card-body">
+                              <h5 class="card-title">Avangers: Infinity War</h5>
+                              <div>
+                                 <img src="./images/calendar-alt-solid-24.png" alt="calendar" width="25" height="23">
+                                 <span>2018</span>
+                              </div>
+                              
+                              <div class="my-3">
+                                 <img src="./images/light-Star.svg" alt="" width="17" height="17">
+                                 <span>8.7</span>
+                              </div>
+                              
+                              <div class="w-100 d-flex gap-4 justify-content-center">
+                                 <a href="#" class="btn btn-outline-primary btn-sm">Watch trailer</a>
+                                 
+                                 <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    More info
+                                 </button>
+                                 
+                                 <button type="button" class="btn btn-outline-success btn-sm">Bookmark</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-6 mb-3">
+                        <div class="card">
+                           <img src="./images/iron-man.jpeg" class="card-img-top" style="max-height: 180px; object-fit: cover;" alt="iron man image">
+                           <div class="card-body">
+                              <h5 class="card-title">Avangers: Infinity War</h5>
+                              <div>
+                                 <img src="./images/calendar-alt-solid-24.png" alt="" width="25" height="23">
+                                 <span>2012</span>
+                              </div>
+                              
+                              <div class="my-3">
+                                 <img src="./images/light-Star.svg" alt="" width="17" height="17">
+                                 <span>8.1</span>
+                              </div>
+                              
+                              <div class="w-100 d-flex gap-4 justify-content-center">
+                                 <a href="#" class="btn btn-outline-primary btn-sm">Watch trailer</a>
+                                 
+                                 <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    More info
+                                 </button>
+                                 
+                                 <button type="button" class="btn btn-outline-success btn-sm">Bookmark</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <nav class="d-flex justify-content-center">
+                     <ul class="pagination">
+                        <li class="page-item active" aria-current="page">
+                           <span class="page-link">1</span>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+   
+   <!-- Modal -->
+   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="staticBackdropLabel">More information</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               Marvel's The Avengers (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland), or simply The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sixth film in the Marvel Cinematic Universe (MCU).
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   <footer class="">
+   </footer>
+   
+   <script src="./js/bootstrap.js"></script>
+</body>
+</html>
